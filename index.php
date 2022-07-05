@@ -31,7 +31,6 @@
     </form>
 
     <!-- Member list -->
-    <!-- Partie en dur, a dynamiser  -->
     <h2>Membres de l'équipage</h2>
     <section class="row member-list">
     </section>
@@ -41,6 +40,7 @@
     <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
   </footer>
 
+  <!-- mes scripts  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>

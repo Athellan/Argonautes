@@ -1,6 +1,6 @@
 <?php
 
-//* version API
+// version API
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 

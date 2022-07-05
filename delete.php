@@ -13,7 +13,7 @@ $id = $_GET['id'];
 // Ecriture de la requête INSERT INTO
 $sql = "DELETE FROM argonautes WHERE ID = :id";
 
-// Execution de la requête d'insertion (exec, pas query)
+// Execution de la requête d'insertion
 $pdoStatement = $newBD->prepare($sql);
 $pdoStatement->bindValue(':id', $id, PDO::PARAM_STR);
 $pdoStatement->execute();

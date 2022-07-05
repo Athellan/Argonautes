@@ -7,10 +7,11 @@ include('pdo.php');
 $name = $_POST['name'];
 
 // 3. j'insère ces données en base
+
 // Ecriture de la requête INSERT INTO
 $sql = "INSERT INTO argonautes (name) VALUES (:name)";
 
-// Execution de la requête d'insertion (exec, pas query)
+// Execution de la requête d'insertion
 $pdoStatement = $newBD->prepare($sql);
 $pdoStatement->bindValue(':name', $name, PDO::PARAM_STR);
 $pdoStatement->execute();
@@ -22,5 +23,3 @@ if ($rowCount > 0) {
 } else {
     echo 'Une erreur s\'est produite';
 }
-
-// -----------------------------------------------------
