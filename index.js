@@ -5,6 +5,9 @@ const results = fetch("select.php")
   });
 const h2 = document.getElementById("team");
 const counterLabel = document.getElementById("counter-label");
+const imgLeft = document.querySelector(".argo__left");
+const imgRight = document.querySelector(".argo__right");
+console.log(imgLeft, imgRight);
 let counter = 0;
 
 function insertMarin(data) {
@@ -35,10 +38,17 @@ function insertMarin(data) {
 
 function updateNb(nb) {
   counterLabel.innerHTML = nb;
-  if (nb > 1) {
+  if (nb === 1) {
     h2.textContent = `Il y a actuellement ${nb} membres d'équipage`;
+    imgLeft.classList.add("imgShow");
+    imgRight.classList.remove("imgShow");
+  } else if (nb > 1) {
+    h2.textContent = `Il y a actuellement ${nb} membres d'équipage`;
+    imgRight.classList.add("imgShow");
   } else {
     h2.textContent = `Il y a actuellement ${nb} membre d'équipage`;
+    imgLeft.classList.remove("imgShow");
+    imgLeft.classList.add("imgHide");
   }
 }
 
