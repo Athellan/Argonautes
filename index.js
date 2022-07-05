@@ -3,6 +3,9 @@ const results = fetch("select.php")
   .then((data) => {
     insertMarin(data);
   });
+const h2 = document.getElementById("team");
+const counterLabel = document.getElementById("counter-label");
+let counter = 0;
 
 function insertMarin(data) {
   //on sélection le parent
@@ -14,6 +17,8 @@ function insertMarin(data) {
     newDiv.innerHTML = `<span>${marin.name}</span>`;
     newDiv.className =
       "member-item col-3 d-flex justify-content-between border m-2";
+
+    updateNb(++counter);
 
     const removeButton = document.createElement("a");
     removeButton.className = "member-delete";
@@ -28,6 +33,15 @@ function insertMarin(data) {
   });
 }
 
+function updateNb(nb) {
+  counterLabel.innerHTML = nb;
+  if (nb > 1) {
+    h2.textContent = `Il y a actuellement ${nb} membres d'équipage`;
+  } else {
+    h2.textContent = `Il y a actuellement ${nb} membre d'équipage`;
+  }
+}
+
 const handleRemove = (e) => {
   // je récup l'id stocké dans la balise lien
   const id = e.currentTarget.id;
@@ -38,10 +52,11 @@ const handleRemove = (e) => {
     .then((data) => {
       if (data.status === 1) {
         setTimeout(() => {
-          currentDiv.classList.add("deleted");
+          currentDiv.textContent = "Supprimé";
         }, 500);
         setTimeout(() => {
           currentDiv.remove();
+          updateNb(--counter);
         }, 1000);
       }
     });
