@@ -7,7 +7,7 @@ body {
 
 main {
   max-width: 960px;
-  margin: 0 auto;
+  margin:  auto;
 }
 
 header {
@@ -24,6 +24,9 @@ header h1 {
   font-size: 2.5em;
 }
 
+.logo {
+  visibility: visible;
+}
 /* footer {
   background: chocolate
 } */
@@ -31,6 +34,7 @@ header h1 {
 h1, h2 {
   text-align: center;
 }
+
 
 label {
   display: block;
@@ -44,15 +48,43 @@ label {
 
 .member-item {
   padding: 0.25em 0;
+  margin-right: 25px;
+}
+
+.row {
+  justify-content: space-betweens
 }
 
 .member-delete {
  background-color: white;
 }
 
+.crew-count {
+  display: flex;
+  max-width: 100%;
+}
+.argo__left {
+  width: 100px;
+  margin-right: 80px;
+}
+
+.argo__right {
+  width: 100px;
+  margin-left: 50px;
+}
 
 
+img {
+  visibility: hidden;
+}
 
+.imgHide {
+  visibility: hidden;
+}
+
+.imgShow {
+  visibility: visible;
+}
 footer {
   margin-top: 2em;
   text-align: center;

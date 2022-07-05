@@ -15,7 +15,7 @@
   <!-- Header section -->
   <header>
     <h1>
-      <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
+      <img class="logo" src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
       Les Argonautes
     </h1>
   </header>
@@ -32,7 +32,11 @@
     </form>
 
     <!-- Member list -->
-    <h2 id="team">Il y a actuellement <span id="counter-label">0</span> membre d'équipage</h2>
+    <div class="crew-count">
+      <img class="argo__left" src="images/argo__left.gif" alt="Argo left">
+      <h2 id="team">Il y a actuellement <span id="counter-label">0</span> membre d'équipage</h2>
+      <img class="argo__right" src="images/argo__right.gif" alt="Argo right">
+    </div>
     <section class="row member-list">
     </section>
   </main>
