@@ -50,6 +50,12 @@ label {
  background-color:rgb(8, 8, 8);
 }
 
+.deleted {
+  content: "Supprimé";
+  color: red;
+  font-weight: bold;
+  
+}
 footer {
   margin-top: 2em;
   text-align: center;

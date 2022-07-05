@@ -38,7 +38,7 @@ const handleRemove = (e) => {
     .then((data) => {
       if (data.status === 1) {
         setTimeout(() => {
-          currentDiv.textContent = "Supprimé";
+          currentDiv.classList.add("deleted");
         }, 500);
         setTimeout(() => {
           currentDiv.remove();
