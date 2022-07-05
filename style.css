@@ -47,15 +47,12 @@ label {
 }
 
 .member-delete {
- background-color:rgb(8, 8, 8);
+ background-color: white;
 }
 
-.deleted {
-  content: "Supprimé";
-  color: red;
-  font-weight: bold;
-  
-}
+
+
+
 footer {
   margin-top: 2em;
   text-align: center;
