@@ -7,7 +7,7 @@ body {
 
 main {
   max-width: 960px;
-  margin:  auto;
+  margin: 0 auto;
 }
 
 header {
@@ -52,7 +52,7 @@ label {
 }
 
 .row {
-  justify-content: space-betweens
+  justify-content: space-between;
 }
 
 .member-delete {
